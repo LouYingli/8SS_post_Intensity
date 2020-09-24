@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    import parallelSimuMeta as ps
+  File "/projects/saup0513/local/YingliProj/8SS_post_Intensity/parallelSimuMeta.py", line 158
+    rmtree('./results/'+climate+output_file+eplus_file.split('.')[0])
+    ^
+IndentationError: unexpected indent
