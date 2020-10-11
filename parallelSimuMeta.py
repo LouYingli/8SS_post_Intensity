@@ -154,14 +154,14 @@ def runModel(climate,eplus_path,weather_file,eplus_file,param_value,output_file,
             energy_data_err = csv.writer(csvfile, delimiter=',')
             energy_data_err.writerow(climate+eplus_file)
     
-copyfile('./results/'+climate+output_file+eplus_file.split('.')[0]+'/eplustbl.htm','./results/results/'+climate+eplus_file.split('.')[0]+'.htm')
-while 1:
-    try:
-        rmtree('./results/'+climate+output_file+eplus_file.split('.')[0])
-        break
-    except:
-        pass
-output.put([])
+    copyfile('./results/'+climate+output_file+eplus_file.split('.')[0]+'/eplustbl.htm','./results/results/'+climate+eplus_file.split('.')[0]+'.htm')
+    while 1:
+        try:
+            rmtree('./results/'+climate+output_file+eplus_file.split('.')[0])
+            break
+        except:
+            pass
+    output.put([])
 
 #################################################################################
 #2.modify IDF file and run model, get model output (site EUI)
